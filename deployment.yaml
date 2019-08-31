@@ -26,16 +26,16 @@ spec:
         app: unbound
     spec:
       containers:
-        - name: "unbound"
+        - name: unbound
           image: mvance/unbound:1.9.3
           imagePullPolicy: IfNotPresent
           ports:
-            - name: "dns-udp"
+            - name: dns-udp
               containerPort: 53
-              protocol: "UDP"
-            - name: "dns-tcp"
+              protocol: UDP
+            - name: dns-tcp
               containerPort: 53
-              protocol: "TCP"
+              protocol: TCP
           readinessProbe:
             httpGet:
               path: "/healthz"
@@ -53,10 +53,10 @@ spec:
             successThreshold: 1
             failureThreshold: 1
           volumeMounts:
-            - name: "unbound-conf"
+            - name: unbound-conf
               mountPath: "/opt/unbound/etc/unbound/"
               readOnly: true
-        - name: "healthz"
+        - name: healthz
           image: googlecontainer/exechealthz:1.2
           imagePullPolicy: IfNotPresent
           args:
@@ -64,8 +64,8 @@ spec:
           ports:
             - name: healthz
               containerPort: 8080
-              protocol: "TCP"
+              protocol: TCP
       volumes:
-        - name: "unbound-conf"
+        - name: unbound-conf
           configMap:
             name: camp-dns-configmap
