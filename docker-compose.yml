@@ -13,3 +13,4 @@ services:
       - $PWD/misc/unbound/unbound.conf:/opt/unbound/etc/unbound/unbound.conf:ro
       - $PWD/misc/unbound/root.hints:/opt/unbound/etc/unbound/root.hints:ro
       - $PWD/misc/rsyslog.conf:/etc/rsyslog.conf:ro
+      # - $PWD/misc/rsyslog.d/listen.conf:/etc/rsyslog.d/listen.conf:ro
