@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  unbound:
+    image: wide-camp-1909/camp-dns:latest
+    build:
+      context: .
+    hostname: unbound
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+    volumes:
+      - $PWD/misc/unbound/unbound.conf:/opt/unbound/etc/unbound/unbound.conf:ro
+      - $PWD/misc/unbound/root.hints:/opt/unbound/etc/unbound/root.hints:ro
+      - $PWD/misc/rsyslog.conf:/etc/rsyslog.conf:ro
