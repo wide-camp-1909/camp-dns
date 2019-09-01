@@ -16,4 +16,5 @@ spec:
       port: 53
       protocol: TCP
   externalIPs:
-    - 10.108.231.189
+    - 203.178.158.1
+    - 203.178.158.2
