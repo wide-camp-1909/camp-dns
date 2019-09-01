@@ -56,6 +56,9 @@ spec:
             - name: unbound-conf
               mountPath: "/opt/unbound/etc/unbound/"
               readOnly: true
+            - name: rsyslogd-conf
+              mountPath: "/opt/rsyslogd/etc/"
+              readOnly: true
         - name: healthz
           image: googlecontainer/exechealthz:1.2
           imagePullPolicy: IfNotPresent
@@ -68,4 +71,7 @@ spec:
       volumes:
         - name: unbound-conf
           configMap:
-            name: camp-dns-configmap
+            name: unbound-configmap
+        - name: rsyslogd-conf
+          configMap:
+            name: rsyslogd-configmap
