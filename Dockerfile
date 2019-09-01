@@ -6,4 +6,4 @@ RUN apt-get update \
       rsyslog vim procps \
  && rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/*
 
-RUN rsyslogd
+CMD rsyslogd && /unbound.sh
