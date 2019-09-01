@@ -39,7 +39,9 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: rsyslogd-configmap
+  name: {{ .Release.Name }}-rsyslogd-configmap
+  labels:
+{{ include "camp-dns.labels" . | indent 4 }}
 data:
   rsyslog.conf: |-
     $ModLoad imuxsock
