@@ -73,7 +73,7 @@ spec:
       volumes:
         - name: unbound-conf
           configMap:
-            name: {{ .Release.Name }}-unbound-configmap
+            name: unbound-configmap
         - name: rsyslogd-conf
           configMap:
-            name: {{ .Release.Name }}-rsyslogd-configmap
+            name: rsyslogd-configmap

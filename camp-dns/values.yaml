@@ -13,5 +13,5 @@ unbound:
     - 172.16.0.0/12
     - 192.168.0.0/16
 
-rsyslog:
+rsyslogd:
   server: 131.113.137.198
