@@ -3,7 +3,9 @@ unbound:
     repository: wide-camp-1909/camp-dns
     tag: latest
     pullPolicy: IfNotPresent
-  replicaCount: 4
+  replicaCountMin: 4
+  replicaCountMax: 16
+  averageUtilization: 80
   listen:
     - 203.178.158.1
     - 203.178.158.2
