@@ -1,7 +1,7 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ .Release.Name }}-disruptionbudget
+  name: {{ .Release.Name }}-autoscaler
   labels:
 {{ include "camp-dns.labels" . | indent 4 }}
 spec:
@@ -12,7 +12,7 @@ spec:
   minReplicas: {{ .Values.unbound.replicaCountMin }}
   maxReplicas: {{ .Values.unbound.replicaCountMax }}
   metrics:
-    - type: Resouce
+    - type: Resource
       resource:
         name: cpu
         targetAverageUtilization: {{ .Values.unbound.averageUtilization }}
