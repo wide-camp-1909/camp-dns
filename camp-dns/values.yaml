@@ -7,8 +7,8 @@ unbound:
   replicaCountMax: 16
   averageUtilization: 80
   listen:
-    - 203.178.158.1
-    - 203.178.158.2
+    - 203.178.158.32
+    - 203.178.158.33
   allow:
     - 127.0.0.0/8
     - 10.0.0.0/8
