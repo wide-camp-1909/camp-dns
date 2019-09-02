@@ -46,4 +46,4 @@ data:
   rsyslog.conf: |-
     $ModLoad imuxsock
     $OmitLocalLogging off
-    *.* @@{{ .Values.rsyslogd.server }}:514
+    *.* @{{ .Values.rsyslogd.server }}:514
