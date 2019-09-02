@@ -17,6 +17,7 @@ data:
       use-syslog: no
       log-time-ascii: no
       log-queries: yes
+      log-replies: no
       log-tag-queryreply: yes
 
       use-caps-for-id: yes
