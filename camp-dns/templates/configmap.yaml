@@ -14,7 +14,7 @@ data:
       interface: 0.0.0.0
       port: 53
 
-      use-syslog: no
+      use-syslog: yes
       log-time-ascii: no
       log-queries: yes
       log-replies: no
