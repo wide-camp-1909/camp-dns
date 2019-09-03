@@ -27,6 +27,8 @@ spec:
         app: unbound
 {{ include "camp-dns.labels" . | indent 8 }}
     spec:
+      imagePullSecrets:
+        - name: {{ .Values.unbound.image.pullSecret }}
       containers:
         - name: unbound
           image: {{ .Values.unbound.image.repository }}:{{ .Values.unbound.image.tag }}
