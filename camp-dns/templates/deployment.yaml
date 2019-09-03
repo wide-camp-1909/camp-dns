@@ -48,6 +48,7 @@ spec:
             timeoutSeconds: 2
             successThreshold: 1
             failureThreshold: 1
+            periodSeconds: 10
           livenessProbe:
             httpGet:
               path: "/healthz"
@@ -56,6 +57,7 @@ spec:
             timeoutSeconds: 2
             successThreshold: 1
             failureThreshold: 3
+            periodSeconds: 10
           volumeMounts:
             - name: unbound-conf
               mountPath: "/opt/unbound/etc/unbound/"
