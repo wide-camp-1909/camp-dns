@@ -1,6 +1,7 @@
 unbound:
   image:
-    repository: wide-camp-1909/camp-dns
+    # repository: wide-camp-1909/camp-dns
+    repository: 203.178.158.5:30500/wide-camp-1909/camp-dns
     tag: latest
     pullPolicy: IfNotPresent
   replicaCountMin: 4
