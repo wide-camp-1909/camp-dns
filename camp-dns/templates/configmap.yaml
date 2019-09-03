@@ -27,6 +27,9 @@ data:
 {{ end }}
       root-hints: root.hints
 
+      local-zone: "health.check.unbound." transparent
+      local-data: "health.check.unbound. 60 IN A 169.254.169.254"
+
     remote-control:
       control-enable: no
 

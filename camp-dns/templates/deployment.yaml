@@ -65,7 +65,7 @@ spec:
           image: googlecontainer/exechealthz:1.2
           imagePullPolicy: IfNotPresent
           args:
-            - "-cmd=nslookup wide.ad.jp 127.0.0.1:53 > /dev/null"
+            - "-cmd=nslookup health.check.unbound. 127.0.0.1:53 > /dev/null"
           ports:
             - name: healthz
               containerPort: 8080
